@@ -61,11 +61,10 @@
         </center>
       
       <!-- form for online order (user input) -->
-      <form action="/results.php">
+      <form action="./results.php">
         <!-- Drop-Down Menu for size of salad -->
         <label for="salad-size"><h5>Size of salad:</h5></label>
         <select id="salad-size" name="salad-size">
-          <option value="0">-- Size --</option>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
@@ -88,16 +87,15 @@
         <!-- Drop-Down Menu for Number of Drinks -->
         <label for="drinks"><h5>Number of Drinks:</h5></label>
         <select id="drinks" name="drinks">
-          <option value="0">-- # of Drinks --</option>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
         </select><br><br>
         <!-- Radio Button for Salad Dressing -->
         <h5>Salad Dressing?</h5>
-        <input type="radio" id="yes" name="dressing-yes" value="yes">
+        <input type="radio" id="yes" name="salad-dressing" value="yes">
         <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="dressing-no" value="no">
+        <input type="radio" id="no" name="salad-dressing" value="no">
         <label for="no">No</label><br>
         <br><br>
         <!-- SUBMIT BUTTON -->

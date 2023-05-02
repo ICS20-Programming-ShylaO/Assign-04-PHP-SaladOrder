@@ -56,7 +56,7 @@
     $sizeCost = PRICE_MEDIUM;
   }
   //cost for large size
-  else if ($sizse == "large") {
+  else if ($size == "large") {
     $sizeCost = PRICE_LARGE;
   }
   //else user did not put a size
