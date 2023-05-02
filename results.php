@@ -1,4 +1,5 @@
 <?php
+
   //setting constants for tax and prices of sizes, toppings, drinks, and salad dressing
   define("HST", 0.13);
   define("PRICE_SMALL", 5.99);
@@ -14,34 +15,16 @@
 
   //declaring variables for size, drinks, and dressing
   $size = $_POST["salad-size"];
-  $nOfDrinks = intval($_POST["drinks"]);
-  $userDressing = intval($_POST["salad-dressing"]);
+  $nOfDrinks = isset($_POST["drinks"]) ? $_POST["drinks"] : 0;
+  $userDressing = isset($_POST["salad-dressing"]) ? $_POST["salad-dressing"] : "no";
 
   //initializing variable for the number of toppings
   $nOfToppings = 0;
 
-  //Changing the number of toppings based on the number of checkboxes checke
-  //if grilled chicken is checked
-  if(isset($_POST["gr-chicken"])){
-    //++ adds one to the total
-    $nOfToppings++;
-  }
-  //if steak is checked
-  if(isset($_POST["s-steak"])){
-    $nOfToppings++;
-  }
-  //if black beans are checked
-  if(isset($_POST["b-beans"])){
-    $nOfToppings++;
-  }
-  //if tuna is checked
-  if(isset($_POST["tuna"])){
-    $nOfToppings++;
-  }
-  //if peanuts are checked
-  if(isset($_POST["peanuts"])){
-    $nOfToppings++;
-  }
+  //Changing the number of toppings based on the number of checkboxes checked
+    if (!empty($_POST["checkboxes"])) {
+    $nOfToppings = count($_POST["checkboxes"]);
+}
 
   //calculating the total cost of toppings
   $toppingsCost = $nOfToppings * PRICE_TOPPINGS;
@@ -52,23 +35,24 @@
     $sizeCost = PRICE_SMALL;
   }
   //cost for medium size
-  else if ($size == "medium") {
+  elseif ($size == "medium") {
     $sizeCost = PRICE_MEDIUM;
   }
   //cost for large size
-  else if ($size == "large") {
+  elseif ($size == "large") {
     $sizeCost = PRICE_LARGE;
   }
   //else user did not put a size
   else {
     echo "Please enter a size.";
+    exit();
   }
 
   //determining the cost of drinks
   $drinksCost = $nOfDrinks * PRICE_DRINKS;
   //to check if the user wanted salad dressing, adds 0.50 to the subtotal
-  if (isset($_POST['dressing-yes'])) {
-    $dressingCost = 0.50;
+  if ($userDressing == "yes") {
+    $dressingCost = PRICE_DRESSING;
   }
   else {
     $dressingCost = 0;

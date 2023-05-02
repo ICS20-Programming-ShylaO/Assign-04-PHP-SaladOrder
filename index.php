@@ -61,10 +61,11 @@
         </center>
       
       <!-- form for online order (user input) -->
-      <form action="./results.php">
+      <form action="./results.php" method="post" target="results">
         <!-- Drop-Down Menu for size of salad -->
         <label for="salad-size"><h5>Size of salad:</h5></label>
         <select id="salad-size" name="salad-size">
+          <option value="0">--Size--</option>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
@@ -72,38 +73,39 @@
         <h5>Toppings:</h5>
       </center>
         <!-- checkboxes for toppings -->
-        <input type="checkbox" id="gr-chicken" name="gr-chicken" value="gr-chicken">
+        <input type="checkbox" id="gr-chicken" name="checkboxes[]" value="1">
         <label for="gr-chicken"> Grilled Chicken Strips</label><br>
-        <input type="checkbox" id="s-steak" name="s-steak" value="s-steak">
+        <input type="checkbox" id="s-steak" name="checkboxes[]" value="1">
         <label for="s-steak"> Stirloin Steak Strips</label><br>
-        <input type="checkbox" id="b-beans" name="b-beans" value="b-beans">
+        <input type="checkbox" id="b-beans" name="checkboxes[]" value="1">
         <label for="b-beans"> Black Beans</label><br>
-        <input type="checkbox" id="tuna" name="tuna" value="tuna">
+        <input type="checkbox" id="tuna" name="checkboxes[]" value="1">
         <label for="tuna"> Tuna</label><br>
-        <input type="checkbox" id="peanuts" name="peanuts" value="peanut">
+        <input type="checkbox" id="peanuts" name="checkboxes[]" value="1">
         <label for="peanuts"> Peanuts</label>
         <br><br>
         <center>
         <!-- Drop-Down Menu for Number of Drinks -->
         <label for="drinks"><h5>Number of Drinks:</h5></label>
         <select id="drinks" name="drinks">
+          <option value="0">--Salad Dressing--</option>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
         </select><br><br>
-        <!-- Radio Button for Salad Dressing -->
-        <h5>Salad Dressing?</h5>
-        <input type="radio" id="yes" name="salad-dressing" value="yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="salad-dressing" value="no">
-        <label for="no">No</label><br>
-        <br><br>
+          
+        <!-- Drop-Down Menu for Salad Dressing -->
+        <label for="salad-dressing"><h5>Salad Dressing?</h5></label>
+        <select id="salad-dressing" name="salad-dressing">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br><br>
         <!-- SUBMIT BUTTON -->
         <input type="submit" id="button" value="Submit Order!">
           <br>
       </form>
       <!-- iframe for the response to show on the web page. -->
       <iframe id="results" name="results"></iframe>
-        </center>
+      </center>
   </body>
 </html>
