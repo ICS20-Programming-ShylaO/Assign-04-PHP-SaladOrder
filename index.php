@@ -95,9 +95,9 @@
         </select><br><br>
         <!-- Radio Button for Salad Dressing -->
         <h5>Salad Dressing?</h5>
-        <input type="radio" id="yes" name="dressing-options" value="yes">
+        <input type="radio" id="yes" name="dressing-yes" value="yes">
         <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="dressing-options" value="no">
+        <input type="radio" id="no" name="dressing-no" value="no">
         <label for="no">No</label><br>
         <br><br>
         <!-- SUBMIT BUTTON -->
