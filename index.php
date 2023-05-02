@@ -63,14 +63,14 @@
       <!-- form for online order (user input) -->
       <form action="./results.php" method="post" target="results">
         <!-- Drop-Down Menu for size of salad -->
-        <label for="salad-size"><h5>Size of salad:</h5></label>
+        <label for="salad-size"><h3>Size of salad:</h3></label>
         <select id="salad-size" name="salad-size">
           <option value="0">--Size--</option>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
         </select><br><br>
-        <h5>Toppings:</h5>
+        <h3>Toppings:</h3>
       </center>
         <!-- checkboxes for toppings -->
         <center>
@@ -87,7 +87,7 @@
         <br><br>
         <center>
         <!-- Drop-Down Menu for Number of Drinks -->
-        <label for="drinks"><h5>Number of Drinks:</h5></label>
+        <label for="drinks"><h3>Number of Drinks:</h3></label>
         <select id="drinks" name="drinks">
           <option value="0">--Salad Dressing--</option>
           <option value="0">0</option>
@@ -96,7 +96,7 @@
         </select><br><br>
         </center>
         <!-- Drop-Down Menu for Salad Dressing -->
-        <label for="salad-dressing"><h5>Salad Dressing?</h5></label>
+        <label for="salad-dressing"><h3>Salad Dressing?</h3></label>
         <select id="salad-dressing" name="salad-dressing">
           <option value="yes">Yes</option>
           <option value="no">No</option>
