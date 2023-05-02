@@ -73,6 +73,7 @@
         <h5>Toppings:</h5>
       </center>
         <!-- checkboxes for toppings -->
+        <center>
         <input type="checkbox" id="gr-chicken" name="checkboxes[]" value="1">
         <label for="gr-chicken"> Grilled Chicken Strips</label><br>
         <input type="checkbox" id="s-steak" name="checkboxes[]" value="1">
@@ -93,7 +94,7 @@
           <option value="1">1</option>
           <option value="2">2</option>
         </select><br><br>
-          
+        </center>
         <!-- Drop-Down Menu for Salad Dressing -->
         <label for="salad-dressing"><h5>Salad Dressing?</h5></label>
         <select id="salad-dressing" name="salad-dressing">

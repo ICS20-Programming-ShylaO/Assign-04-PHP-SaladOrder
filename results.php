@@ -64,4 +64,5 @@ else {
   $total = $subtotal + $tax;
 
   //displaying the cost (totals) to the screen
-  echo "Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+
+  echo "You ordered: size " . $size . ", " . $nOfDrinks . " drink(s), " . $nOfToppings . " toppings, and you said " . $userDressing . " to salad dressing. Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
